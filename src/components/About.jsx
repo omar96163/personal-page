@@ -15,7 +15,7 @@ function About() {
             </strong>{" "}
           </h1>
           <p className="text-lg mb-8 text-">
-            A passionate Front-End Developer and an ALX graduate <br /> with a
+            A talented and passionate Front-End Developer and an ALX graduate <br /> with a
             strong focus on building modern, user-friendly web applications.
           </p>
           <section className="mb-8">
