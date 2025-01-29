@@ -4,7 +4,7 @@ function About() {
   const [me, setme] = useState(false);
 
   return (
-    <div className="p-6 max-w-6xl mx-auto mt-16">
+    <div className="p-6 max-w-6xl mx-auto mt-16 bg-white">
       <div className="flex justify-between items-start lg:max-h-[295px]">
         <div>
           <h1 className="text-3xl font-bold mb-4">
@@ -44,7 +44,7 @@ function About() {
             cursor-pointer ${me ? "rotate-180" : ""}`}
           />
           <div
-            className={`text-center transition-all duration-1000 -z-10 ${
+            className={`text-center transition-all duration-700 -z-10 ${
               me ? "z-10" : "-mt-40"
             } `}
           >

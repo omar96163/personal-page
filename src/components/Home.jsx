@@ -13,7 +13,7 @@ function Home() {
   };
 
   return (
-    <div className="flex items-center justify-around mt-28">
+    <div className="flex items-center justify-around mt-28 bg-white">
       <main className="text-2xl leading-relaxed flex flex-col items-start justify-evenly h-[480px]">
         <h1>
           HEY HTERE <br />{" "}
@@ -47,7 +47,7 @@ function Home() {
           />
           <div
             className={`flex gap-3 transition-all duration-500 -z-10 text-base ${
-              me ? "z-10" : "-ml-48 gap-0"
+              me ? "z-10" : "-ml-48 gap-0 "
             }`}
           >
             <a
@@ -69,7 +69,7 @@ function Home() {
               Gih
             </a>
             <a
-              className="text-blue-700 hover:text-white hover:bg-blue-500 hover:ring-2 ring-blue-500 
+              className="text-black hover:text-white hover:bg-blue-500 hover:ring-2 ring-blue-500 
               hover:scale-110 px-1 rounded-lg font-bold transition duration-300"
               href="www.linkedin.com/in/omar-albaz-29b72b272"
               target="_blank"
@@ -81,7 +81,7 @@ function Home() {
               href="https://docs.google.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-700 hover:text-white hover:bg-black hover:ring-2 ring-black 
+              className="text-black hover:text-white hover:bg-black hover:ring-2 ring-black 
               hover:scale-110 px-2 rounded-lg font-bold transition duration-300"
             >
               My.R
