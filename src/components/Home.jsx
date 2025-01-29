@@ -46,13 +46,13 @@ function Home() {
             cursor-pointer ${me ? "rotate-90" : "-rotate-90"}`}
           />
           <div
-            className={`flex gap-3 transition-all duration-500 -z-10 ${
-              me ? "z-10" : "-ml-44"
+            className={`flex gap-3 transition-all duration-500 -z-10 text-base ${
+              me ? "z-10" : "-ml-48 gap-0"
             }`}
           >
             <a
               className="text-black hover:text-white hover:bg-black hover:ring-2 ring-black 
-              hover:scale-110 px-2 rounded-lg text-xl font-bold transition duration-300"
+              hover:scale-110 px-2 rounded-lg font-bold transition duration-300"
               href="https://x.com/omaralbaz444"
               target="_blank"
               rel="noopener noreferrer"
@@ -60,8 +60,17 @@ function Home() {
               X
             </a>
             <a
+              className="text-black hover:text-white hover:bg-black hover:ring-2 ring-black 
+              hover:scale-110 px-2 rounded-lg font-bold transition duration-300"
+              href="https://github.com/omar96163?tab=overview&from=2024-12-01&to=2024-12-31"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gih
+            </a>
+            <a
               className="text-blue-700 hover:text-white hover:bg-blue-500 hover:ring-2 ring-blue-500 
-              hover:scale-110 px-1 rounded-lg text-xl font-bold transition duration-300"
+              hover:scale-110 px-1 rounded-lg font-bold transition duration-300"
               href="www.linkedin.com/in/omar-albaz-29b72b272"
               target="_blank"
               rel="noopener noreferrer"
@@ -69,13 +78,13 @@ function Home() {
               in
             </a>
             <a
-              className="text-black hover:text-white hover:bg-black hover:ring-2 ring-black 
-              hover:scale-110 px-2 rounded-lg text-xl font-bold transition duration-300"
-              href="https://github.com/omar96163?tab=overview&from=2024-12-01&to=2024-12-31"
+              href="https://docs.google.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-blue-700 hover:text-white hover:bg-black hover:ring-2 ring-black 
+              hover:scale-110 px-2 rounded-lg font-bold transition duration-300"
             >
-              Gih
+              My.R
             </a>
           </div>
         </div>

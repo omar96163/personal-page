@@ -15,8 +15,9 @@ function About() {
             </strong>{" "}
           </h1>
           <p className="text-lg mb-8 text-">
-            A talented and passionate Front-End Developer and an ALX graduate <br /> with a
-            strong focus on building modern, user-friendly web applications.
+            A talented and passionate Front-End Developer and an ALX graduate{" "}
+            <br /> with a strong focus on building modern, user-friendly web
+            applications.
           </p>
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-2">Who Am I ?</h2>
@@ -67,24 +68,48 @@ function About() {
         <h2 className="text-2xl font-semibold mb-2">My Projects</h2>
         <ul className="list-disc pl-6">
           <li>
-            <li className="font-medium">E-commerce Website:</li> Built with
-            React.js and Tailwind CSS.
+            <li className="font-medium">
+              <a
+                className="text-blue-500 hover:underline"
+                href="https://recipe-finder-nine-inky.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Recipe Finder
+              </a>
+            </li>
+            Recipe Finder is an interactive web application <br /> that helps
+            users search for recipes easily by dish name <br /> The app displays
+            a list of recipes matching <br /> the search query and allows users
+            to view detailed information for each recipe, <br />
+            including ingredients, preparation instructions, and tutorial videos
+            (if available).
           </li>
           <li>
-            <li className="font-medium">Task Management Dashboard:</li> A
-            dynamic dashboard using JavaScript and CSS.
-          </li>
-          <li>
-            <li className="font-medium">Personal Portfolio:</li> A portfolio
-            showcasing my skills and experience.
-          </li>
-          <li>
-            <li className="font-medium">Responsive Landing Page:</li> A fully
-            responsive page using HTML and CSS.
+            <li className="font-medium">
+              <a
+                className="text-blue-500 hover:underline"
+                href="https://dynamic-to-do-list-js-omega.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                To do list
+              </a>
+            </li>
+            This project is a simple To-Do List web application built with HTML,
+            CSS, and JavaScript. <br /> It allows users to add, delete, and mark
+            tasks as completed efficiently.
+            <br />
+            Users can enter a new task, which will be displayed in the list.
+            <br />
+            Users can remove unwanted tasks from the list
+            <br />
+            Tasks are stored in localStorage to retain them even after
+            refreshing the page.
+            <br />
           </li>
         </ul>
       </section>
-
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">Skills</h2>
         <ul className="list-disc pl-6">
@@ -152,6 +177,16 @@ function About() {
               className="text-blue-500 hover:underline"
             >
               GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              My Resume
             </a>
           </li>
         </ul>
