@@ -32,31 +32,11 @@ function Nav() {
             to="/About"
             className={`text-lg font-semibold hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-500 
               via-yellow-500 to-slate-500 transition-all duration-300 hover:scale-105 
-              ${active === "/About" ? "border-b-2 border-yellow-500 pb-1" : ""}`}
-          >
-            About
-          </Link>
-          <Link
-            onClick={() => setactive("/Project")}
-            to="/Project"
-            className={`text-lg font-semibold hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-500 
-              via-yellow-500 to-slate-500 transition-all duration-300 hover:scale-105
               ${
-                active === "/Project" ? "border-b-2 border-yellow-500 pb-1" : ""
+                active === "/About" ? "border-b-2 border-yellow-500 pb-1" : ""
               }`}
           >
-            Project
-          </Link>
-          <Link
-            onClick={() => setactive("/Contact")}
-            to="/Contact"
-            className={`text-lg font-semibold hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-500 
-              via-yellow-500 to-slate-500 transition-all duration-300 hover:scale-105 
-              ${
-                active === "/Contact" ? "border-b-2 border-yellow-500 pb-1" : ""
-              }`}
-          >
-            Contact
+            Details About Me
           </Link>
         </div>
       </div>

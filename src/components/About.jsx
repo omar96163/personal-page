@@ -36,13 +36,14 @@ function About() {
             alt="OMAR ALBAZ's photo"
             title="OMAR ALBAZ"
           />
-          <img
-            onClick={() => (me ? setme(false) : setme(true))}
-            src="/arrow.png"
+          <p
             alt="Toggle details"
-            className={`w-6 my-3 hover:scale-125 transition-all duration-300 
+            onClick={() => (me ? setme(false) : setme(true))}
+            className={`text-yellow-500 text-3xl my-3 hover:scale-125 transition-all duration-300 
             cursor-pointer ${me ? "rotate-180" : ""}`}
-          />
+          >
+            ↯
+          </p>
           <div
             className={`text-center transition-all duration-700 -z-10 ${
               me ? "z-10" : "-mt-40"

@@ -34,17 +34,18 @@ function Home() {
           transition-all duration-300 hover:scale-105 hover:bg-gradient-to-b from-slate-500 via-yellow-500 to-slate-500
           cursor-pointer hover:shadow-2xl hover:shadow-slate-500"
         />
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-5 items-center">
           <p className="border-y-4 rounded-md hover:border-yellow-500 transition duration-500 bg-white">
             CONTACT ME
           </p>
-          <img
-            onClick={() => (me ? setme(false) : setme(true))}
-            src="/arrow.png"
+          <p
             alt="Toggle details"
-            className={`w-5 h-5 my-3 hover:scale-125 transition-all duration-500 
-            cursor-pointer ${me ? "rotate-90" : "-rotate-90"}`}
-          />
+            onClick={() => (me ? setme(false) : setme(true))}
+            className={`text-yellow-500 text-3xl hover:scale-125 transition-all duration-300 
+              cursor-pointer ${me ? "rotate-180" : ""}`}
+          >
+            ↬
+          </p>
           <div
             className={`flex gap-3 transition-all duration-500 -z-10 text-base ${
               me ? "z-10" : "-ml-48 gap-0 "
