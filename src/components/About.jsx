@@ -4,49 +4,49 @@ function About() {
   const [me, setme] = useState(false);
 
   return (
-    <div className="p-6 max-w-6xl mx-auto mt-16 bg-white">
-      <div className="flex justify-between items-start lg:max-h-[295px]">
+    <div className="p-6 max-w-7xl mx-auto mt-14 bg-white">
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
         <div>
           <h1 className="text-3xl font-bold mb-4">
             Hi, I'm{" "}
-            <strong className="text-yellow-500 px-2 rounded-2xl border-2 border-dashed border-yellow-500 ml-1">
+            <strong className="text-yellow-500 px-2 rounded-2xl border-2 border-dashed border-yellow-500">
               {" "}
               OMAR
             </strong>{" "}
           </h1>
-          <p className="text-lg mb-8 text-">
+          <p className="text-base mb-8">
             A talented and passionate Front-End Developer and an ALX graduate{" "}
             <br /> with a strong focus on building modern, user-friendly web
-            applications.
+            applications
           </p>
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-2">Who Am I ?</h2>
+            <h2 className="text-3xl font-semibold mb-2">Who Am I ?</h2>
             <p className="text-base leading-relaxed">
               I started my journey in web development through self-learning and
-              intensive training at ALX. <br /> I enjoy crafting responsive and
-              accessible web applications that offer a unique user experience.
+              intensive training at ALX <br /> I enjoy crafting responsive and
+              accessible web applications that offer a unique user experience
             </p>
           </section>
         </div>
         <div className="flex flex-col items-center">
           <img
-            className="hover:scale-105 hover:border-yellow-500 border-2 
-            transition-all duration-300 w-[300px] rounded-lg"
-            src="/o.webp"
+            className="hover:ring-2 hover:ring-yellow-500 hover:border-yellow-500 opacity-50 w-44 md:w-60 lg:w-80
+            hover:opacity-100 transition-all duration-1000 rounded-full shadow-2xl shadow-yellow-500"
+            src="images/o.webp"
             alt="OMAR ALBAZ's photo"
             title="OMAR ALBAZ"
           />
           <p
             alt="Toggle details"
             onClick={() => (me ? setme(false) : setme(true))}
-            className={`text-yellow-500 text-3xl my-3 hover:scale-125 transition-all duration-300 
+            className={`text-yellow-500 text-2xl my-3 hover:scale-125 transition-all duration-300 
             cursor-pointer ${me ? "rotate-180" : ""}`}
           >
             ↯
           </p>
           <div
-            className={`text-center transition-all duration-700 -z-10 ${
-              me ? "z-10" : "-mt-40"
+            className={`text-center transition-all duration-700 -z-50 ${
+              me ? "z-50 mb-4" : "-mt-60 text-xs mb-52"
             } `}
           >
             <p>
@@ -66,12 +66,12 @@ function About() {
         </div>
       </div>
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">My Projects</h2>
+        <h2 className="text-3xl font-semibold mb-2">My Projects</h2>
         <ul className="list-disc pl-6">
           <li>
             <li className="font-medium">
               <a
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline text-xl"
                 href="https://recipe-finder-nine-inky.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -84,12 +84,12 @@ function About() {
             a list of recipes matching <br /> the search query and allows users
             to view detailed information for each recipe, <br />
             including ingredients, preparation instructions, and tutorial videos
-            (if available).
+            (if available)
           </li>
           <li>
             <li className="font-medium">
               <a
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline text-xl"
                 href="https://dynamic-to-do-list-js-omega.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -98,21 +98,21 @@ function About() {
               </a>
             </li>
             This project is a simple To-Do List web application built with HTML,
-            CSS, and JavaScript. <br /> It allows users to add, delete, and mark
-            tasks as completed efficiently.
+            CSS, and JavaScript <br /> It allows users to add, delete, and mark
+            tasks as completed efficiently
             <br />
-            Users can enter a new task, which will be displayed in the list.
+            Users can enter a new task, which will be displayed in the list
             <br />
             Users can remove unwanted tasks from the list
             <br />
             Tasks are stored in localStorage to retain them even after
-            refreshing the page.
+            refreshing the page
             <br />
           </li>
         </ul>
       </section>
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">Skills</h2>
+        <h2 className="text-3xl font-semibold mb-2">Skills</h2>
         <ul className="list-disc pl-6">
           <li>
             {" "}
@@ -122,11 +122,11 @@ function About() {
           <li>
             {" "}
             <li className="font-medium">Libraries :</li> Zustand, Axios, React
-            Query (TanStack), React Router, React Hook Form.
+            Query (TanStack), React Router, React Hook Form
           </li>
           <li>
             <li className="font-medium">Tools :</li> Git, GitHub, VS studio
-            code, figma.
+            code, figma
           </li>
           <li>
             <li className="font-medium">Other Skills :</li> UI / UX,
@@ -137,16 +137,16 @@ function About() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">My Goals</h2>
+        <h2 className="text-3xl font-semibold mb-2">My Goal</h2>
         <p className="text-base leading-relaxed">
           I aim to continuously enhance my skills by working on impactful
           projects and to join a team where I can grow and contribute to
-          building exceptional web experiences.
+          building exceptional web experiences
         </p>
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-2">Contact Me</h2>
+        <h2 className="text-3xl font-semibold mb-2">Contact Me</h2>
         <p className="text-base leading-relaxed">
           If you're looking for a creative and dedicated Front-End Developer,
           feel free to reach out :

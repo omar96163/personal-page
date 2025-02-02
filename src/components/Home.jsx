@@ -13,13 +13,13 @@ function Home() {
   };
 
   return (
-    <div className="flex items-center justify-around mt-28 bg-white">
-      <main className="text-2xl leading-relaxed flex flex-col items-start justify-evenly h-[480px]">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-around mt-28 bg-white">
+      <main className="text-xl lg:text-2xl leading-relaxed flex flex-col items-start justify-evenly h-[480px]">
         <h1>
           HEY HTERE <br />{" "}
           <p
             className="hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-800 
-          via-yellow-500 to-slate-800 transition-all duration-300 font-black text-5xl"
+          via-yellow-500 to-slate-800 transition-all duration-300 font-black text-3xl lg:text-5xl"
           >
             {" "}
             I am Omar EL-Baz
@@ -34,21 +34,21 @@ function Home() {
           transition-all duration-300 hover:scale-105 hover:bg-gradient-to-b from-slate-500 via-yellow-500 to-slate-500
           cursor-pointer hover:shadow-2xl hover:shadow-slate-500"
         />
-        <div className="flex gap-5 items-center">
-          <p className="border-y-4 rounded-md hover:border-yellow-500 transition duration-500 bg-white">
-            CONTACT ME
+        <div className="flex gap-2 items-center">
+          <p className="border-y-4 rounded-md hover:border-yellow-500 transition duration-500 bg-white text-base lg:text-2xl py-1">
+            CONTACT
           </p>
           <p
             alt="Toggle details"
             onClick={() => (me ? setme(false) : setme(true))}
-            className={`text-yellow-500 text-3xl hover:scale-125 transition-all duration-300 
+            className={`text-yellow-500 text-base lg:text-2xl hover:scale-125 transition-all duration-300
               cursor-pointer ${me ? "rotate-180" : ""}`}
           >
             ↬
           </p>
           <div
-            className={`flex gap-3 transition-all duration-500 -z-10 text-base ${
-              me ? "z-10" : "-ml-48 gap-0 "
+            className={`flex items-center gap-1 transition-all duration-500 text-base ${
+              me ? "z-10" : "-m-[550px] -z-10"
             }`}
           >
             <a
@@ -91,9 +91,9 @@ function Home() {
         </div>
       </main>
       <img
-        className="hover:scale-110 hover:ring-2 hover:ring-yellow-500 hover:border-yellow-500 opacity-80 
-        hover:opacity-100 transition-all duration-300 w-[400px] rounded-lg"
-        src="/o.webp"
+        className="hover:ring-2 hover:ring-yellow-500 hover:border-yellow-500 opacity-50 w-60 md:w-80 lg:w-96
+        hover:opacity-100 transition-all duration-1000 rounded-full shadow-2xl shadow-yellow-500"
+        src="images/o.webp"
         alt="OMAR ALBAZ's photo"
         title="OMAR ALBAZ"
       />
