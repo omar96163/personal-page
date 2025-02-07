@@ -49,7 +49,7 @@ function Nav() {
       </div>
       <div
         className={`flex flex-col items-center space-y-5 mt-20 sm:hidden transition-all duration-1000 ${
-          menuo ? "" : "-mt-40"
+          menuo ? "" : "hidden"
         }`}
       >
         <Link

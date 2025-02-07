@@ -30,7 +30,7 @@ function About() {
         </div>
         <div className="flex flex-col items-center">
           <img
-            className="opacity-50 w-44 md:w-60 lg:w-64 hover:opacity-100 transition-all duration-1000 
+            className="opacity-50 w-44 md:w-52 lg:w-64 hover:opacity-100 transition-all duration-1000 
             rounded-full shadow-xl shadow-yellow-500"
             src="images/o.webp"
             alt="OMAR ALBAZ's photo"
