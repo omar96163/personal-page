@@ -4,7 +4,7 @@ function About() {
   const [me, setme] = useState(false);
 
   return (
-    <div className="p-6 max-w-7xl mx-auto mt-14 bg-white">
+    <div className="p-6 max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
         <div>
           <h1 className="text-3xl font-bold mb-4">
@@ -16,8 +16,8 @@ function About() {
           </h1>
           <p className="text-base mb-8">
             A talented and passionate Front-End Developer and an ALX graduate{" "}
-            <br /> with a strong focus on building modern, user-friendly web
-            applications
+            with a strong focus on building modern,
+            <br /> user-friendly web applications
           </p>
           <section className="mb-8">
             <h2 className="text-3xl font-semibold mb-2">Who Am I ?</h2>
@@ -30,8 +30,8 @@ function About() {
         </div>
         <div className="flex flex-col items-center">
           <img
-            className="hover:ring-2 hover:ring-yellow-500 hover:border-yellow-500 opacity-50 w-44 md:w-60 lg:w-80
-            hover:opacity-100 transition-all duration-1000 rounded-full shadow-2xl shadow-yellow-500"
+            className="opacity-50 w-44 md:w-60 lg:w-64 hover:opacity-100 transition-all duration-1000 
+            rounded-full shadow-xl shadow-yellow-500"
             src="images/o.webp"
             alt="OMAR ALBAZ's photo"
             title="OMAR ALBAZ"
@@ -39,8 +39,8 @@ function About() {
           <p
             alt="Toggle details"
             onClick={() => (me ? setme(false) : setme(true))}
-            className={`text-yellow-500 text-2xl my-3 hover:scale-125 transition-all duration-300 
-            cursor-pointer ${me ? "rotate-180" : ""}`}
+            className={`text-yellow-500 text-2xl md:text-4xl my-3 transition-all duration-500 
+            cursor-pointer ${me ? "rotate-180" : ""} animate-pulse`}
           >
             ↯
           </p>
@@ -79,12 +79,11 @@ function About() {
                 Recipe Finder
               </a>
             </li>
-            Recipe Finder is an interactive web application <br /> that helps
-            users search for recipes easily by dish name <br /> The app displays
-            a list of recipes matching <br /> the search query and allows users
-            to view detailed information for each recipe, <br />
-            including ingredients, preparation instructions, and tutorial videos
-            (if available)
+            Recipe Finder is an interactive web application that helps users
+            search for recipes easily by dish name The app displays a list of
+            recipes matching the search query and allows users to view detailed
+            information for each recipe, including ingredients, preparation
+            instructions, and tutorial videos
           </li>
           <li>
             <li className="font-medium">
@@ -98,16 +97,11 @@ function About() {
               </a>
             </li>
             This project is a simple To-Do List web application built with HTML,
-            CSS, and JavaScript <br /> It allows users to add, delete, and mark
-            tasks as completed efficiently
-            <br />
-            Users can enter a new task, which will be displayed in the list
-            <br />
-            Users can remove unwanted tasks from the list
-            <br />
+            CSS, and JavaScript It allows users to add, delete, and mark tasks
+            as completed efficiently Users can enter a new task, which will be
+            displayed in the list Users can remove unwanted tasks from the list
             Tasks are stored in localStorage to retain them even after
             refreshing the page
-            <br />
           </li>
         </ul>
       </section>
@@ -155,7 +149,7 @@ function About() {
           <li>
             <a
               href="mailto:omaralbaz635@gmail.com"
-              className="text-blue-500 hover:underline"
+              className="text-blue-700 hover:underline"
             >
               Email
             </a>
@@ -165,7 +159,7 @@ function About() {
               href="https://linkedin.com/in/omar-profile"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+              className="text-blue-700 hover:underline"
             >
               LinkedIn
             </a>
@@ -175,7 +169,7 @@ function About() {
               href="https://github.com/omar-profile"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+              className="text-blue-700 hover:underline"
             >
               GitHub
             </a>
@@ -185,7 +179,7 @@ function About() {
               href="https://docs.google.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+              className="text-blue-700 hover:underline"
             >
               My Resume
             </a>

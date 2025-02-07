@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function Home() {
-  const [me, setme] = useState(false);
   const hire = () => {
     const email = "omaralbaz635@gmail.com";
     const subject = "Hiring Inquiry";
@@ -13,16 +12,19 @@ function Home() {
   };
 
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-around mt-28 bg-white">
-      <main className="text-xl lg:text-2xl leading-relaxed flex flex-col items-start justify-evenly h-[480px]">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-around">
+      <main className="text-xl lg:text-2xl leading-relaxed flex flex-col items-start justify-around h-[480px]">
         <h1>
           HEY HTERE <br />{" "}
-          <p
-            className="hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-800 
-          via-yellow-500 to-slate-800 transition-all duration-300 font-black text-3xl lg:text-5xl"
-          >
+          <p className="font-black text-3xl lg:text-5xl">
             {" "}
-            I am Omar EL-Baz
+            I am{" "}
+            <strong
+              className="text-transparent bg-clip-text bg-gradient-to-b from-slate-950 via-yellow-500
+            to-slate-950 transition-all duration-1000 font-black text-3xl lg:text-5xl animate-pulse"
+            >
+              Omar EL-Baz
+            </strong>
           </p>{" "}
           Front End Web Developer
         </h1>
@@ -30,69 +32,51 @@ function Home() {
           onClick={hire}
           type="button"
           value="HIRE ME"
-          className="text-base py-2 px-7 border-y-4 border-double border-slate-500 rounded-md hover:border-yellow-500 
-          transition-all duration-300 hover:scale-105 hover:bg-gradient-to-b from-slate-500 via-yellow-500 to-slate-500
-          cursor-pointer hover:shadow-2xl hover:shadow-slate-500"
+          className="text-lg text-yellow-500 py-2 px-7 border-4 border-double rounded-md border-yellow-500 cursor-pointer
+          hover:text-yellow-100 hover:border-yellow-100 hover:scale-110 duration-1000"
         />
-        <div className="flex gap-2 items-center">
-          <p className="border-y-4 rounded-md hover:border-yellow-500 transition duration-500 bg-white text-base lg:text-2xl py-1">
-            CONTACT
-          </p>
-          <p
-            alt="Toggle details"
-            onClick={() => (me ? setme(false) : setme(true))}
-            className={`text-yellow-500 text-base lg:text-2xl hover:scale-125 transition-all duration-300
-              cursor-pointer ${me ? "rotate-180" : ""}`}
+        <div className="flex gap-4 md:gap-10">
+          <a
+            className="border-[2px] rounded-full text-center px-3 py-1 hover:text-black hover:bg-white hover:border-black
+            duration-1000 font-semibold hover:animate-none animate-[bounce_1s_ease-in-out_infinite]"
+            href="https://x.com/omaralbaz444"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            ↬
-          </p>
-          <div
-            className={`flex items-center gap-1 transition-all duration-500 text-base ${
-              me ? "z-10" : "-m-[550px] -z-10"
-            }`}
+            X
+          </a>
+          <a
+            className="border-[2px] rounded-full text-center px-3 py-1 hover:text-red-700 hover:bg-white hover:border-red-700
+            duration-1000 font-semibold hover:animate-none animate-[bounce_1.1s_ease-in-out_infinite]"
+            href="https://github.com/omar96163?tab=overview&from=2024-12-01&to=2024-12-31"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <a
-              className="text-black hover:text-white hover:bg-black hover:ring-2 ring-black 
-              hover:scale-110 px-2 rounded-lg font-bold transition duration-300"
-              href="https://x.com/omaralbaz444"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              X
-            </a>
-            <a
-              className="text-black hover:text-white hover:bg-black hover:ring-2 ring-black 
-              hover:scale-110 px-2 rounded-lg font-bold transition duration-300"
-              href="https://github.com/omar96163?tab=overview&from=2024-12-01&to=2024-12-31"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Gih
-            </a>
-            <a
-              className="text-black hover:text-white hover:bg-blue-500 hover:ring-2 ring-blue-500 
-              hover:scale-110 px-1 rounded-lg font-bold transition duration-300"
-              href="www.linkedin.com/in/omar-albaz-29b72b272"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              in
-            </a>
-            <a
-              href="https://docs.google.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black hover:text-white hover:bg-black hover:ring-2 ring-black 
-              hover:scale-110 px-2 rounded-lg font-bold transition duration-300"
-            >
-              My.R
-            </a>
-          </div>
+            Gih
+          </a>
+          <a
+            className="border-[2px] rounded-full text-center px-3 py-1 hover:text-blue-700 hover:bg-white hover:border-blue-700
+            duration-1000 font-semibold hover:animate-none animate-[bounce_1.2s_ease-in-out_infinite]"
+            href="www.linkedin.com/in/omar-albaz-29b72b272"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            in
+          </a>
+          <a
+            className="border-[2px] rounded-full text-center px-3 py-1 hover:text-yellow-500 hover:bg-white hover:border-yellow-500
+            duration-1000 font-semibold hover:animate-none animate-[bounce_1.3s_ease-in-out_infinite]"
+            href="https://docs.google.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My.R
+          </a>
         </div>
       </main>
       <img
-        className="hover:ring-2 hover:ring-yellow-500 hover:border-yellow-500 opacity-50 w-60 md:w-80 lg:w-96
-        hover:opacity-100 transition-all duration-1000 rounded-full shadow-2xl shadow-yellow-500"
+        className="opacity-50 w-60 md:w-80 lg:w-96 shadow-yellow-500 transition duration-1000 hover:opacity-100
+         rounded-full shadow-2xl"
         src="images/o.webp"
         alt="OMAR ALBAZ's photo"
         title="OMAR ALBAZ"

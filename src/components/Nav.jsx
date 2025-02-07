@@ -8,7 +8,7 @@ function Nav() {
   const [menuo, setmenuo] = useState(false);
 
   return (
-    <>
+    <div className={`mb-20 md:mb-28`}>
       <div className="flex items-end justify-around">
         <Link to="/">
           <p
@@ -23,7 +23,7 @@ function Nav() {
             onClick={() => setactive("/")}
             to="/"
             className={`text-lg font-semibold hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-500 
-              via-yellow-500 to-slate-500 transition-all duration-300 hover:scale-105
+              via-yellow-500 to-slate-500 transition-all duration-500
               ${active === "/" ? "border-b-2 border-yellow-500 pb-1" : ""}`}
           >
             Home
@@ -32,7 +32,7 @@ function Nav() {
             onClick={() => setactive("/About")}
             to="/About"
             className={`text-lg font-semibold hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-500 
-              via-yellow-500 to-slate-500 transition-all duration-300 hover:scale-105 
+              via-yellow-500 to-slate-500 transition-all duration-500 
               ${
                 active === "/About" ? "border-b-2 border-yellow-500 pb-1" : ""
               }`}
@@ -40,18 +40,17 @@ function Nav() {
             Details About Me
           </Link>
         </div>
-        <div className="block sm:hidden cursor-pointer hover:scale-125 transition-all duration-300">
-          <img
-            src="images/menu.png"
-            alt="menu"
-            onClick={() => setmenuo(!menuo)}
-          />
-        </div>
+        <img
+          className="block sm:hidden cursor-pointer hover:scale-125 transition-all duration-500"
+          src="images/menu.png"
+          alt="menu"
+          onClick={() => setmenuo(!menuo)}
+        />
       </div>
       <div
-        className={`transition-all duration-1000 absolute left-0 bg-gray-100 p-4 top-[85px] space-y-4
-          flex flex-col sm:hidden rounded-r-2xl border-2 border-r-yellow-500 border-y-yellow-500
-         ${menuo ? "z-50" : "-z-50 -left-40"}`}
+        className={`flex flex-col items-center space-y-5 mt-20 sm:hidden transition-all duration-1000 ${
+          menuo ? "" : "-mt-40"
+        }`}
       >
         <Link
           onClick={() => {
@@ -59,8 +58,8 @@ function Nav() {
             setmenuo(false);
           }}
           to="/"
-          className={`text-lg font-semibold hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-500
-              via-yellow-500 to-slate-500 transition-all duration-300 hover:scale-105 w-fit
+          className={`text-lg font-semibold hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-500 
+              via-yellow-500 to-slate-500 transition-all duration-500 hover:scale-105
               ${active === "/" ? "border-b-2 border-yellow-500 pb-1" : ""}`}
         >
           Home
@@ -72,7 +71,7 @@ function Nav() {
           }}
           to="/About"
           className={`text-lg font-semibold hover:text-transparent bg-clip-text hover:bg-gradient-to-b from-slate-500 
-              via-yellow-500 to-slate-500 transition-all duration-300 hover:scale-105 w-fit
+              via-yellow-500 to-slate-500 transition-all duration-500 hover:scale-105 
               ${
                 active === "/About" ? "border-b-2 border-yellow-500 pb-1" : ""
               }`}
@@ -80,7 +79,7 @@ function Nav() {
           About Me
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 

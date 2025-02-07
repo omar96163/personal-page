@@ -6,7 +6,7 @@ import Home from "./components/Home";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen max-h-full px-1 py-8">
+      <div className="min-h-screen max-h-full px-1 py-8 bg-gradient-to-t from-yellow-600 via-gray-700 to-black text-white">
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
