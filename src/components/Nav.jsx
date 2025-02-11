@@ -1,10 +1,9 @@
 import { useState } from "react";
 import React from "react";
-
 import { Link } from "react-router-dom";
 
 function Nav() {
-  const [active, setactive] = useState("");
+  const [active, setactive] = useState(location.pathname);
   const [menuo, setmenuo] = useState(false);
 
   return (
