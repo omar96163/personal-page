@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Home() {
   const hire = () => {
@@ -38,7 +38,7 @@ function Home() {
         <div className="flex gap-4 md:gap-10">
           <a
             className="border-[2px] rounded-full text-center px-3 py-1 hover:text-black hover:bg-white hover:border-black
-            duration-1000 font-semibold hover:animate-none animate-[bounce_1s_ease-in-out_infinite]"
+            duration-1000 font-semibold hover:[animation-play-state:paused] animate-[bounce_1s_ease-in-out_infinite]"
             href="https://x.com/omaralbaz444"
             target="_blank"
             rel="noopener noreferrer"
@@ -47,7 +47,7 @@ function Home() {
           </a>
           <a
             className="border-[2px] rounded-full text-center px-3 py-1 hover:text-red-700 hover:bg-white hover:border-red-700
-            duration-1000 font-semibold hover:animate-none animate-[bounce_1.1s_ease-in-out_infinite]"
+            duration-1000 font-semibold hover:[animation-play-state:paused] animate-[bounce_1.1s_ease-in-out_infinite]"
             href="https://github.com/omar96163?tab=overview&from=2024-12-01&to=2024-12-31"
             target="_blank"
             rel="noopener noreferrer"
@@ -56,7 +56,7 @@ function Home() {
           </a>
           <a
             className="border-[2px] rounded-full text-center px-3 py-1 hover:text-blue-700 hover:bg-white hover:border-blue-700
-            duration-1000 font-semibold hover:animate-none animate-[bounce_1.2s_ease-in-out_infinite]"
+            duration-1000 font-semibold hover:[animation-play-state:paused] animate-[bounce_1.2s_ease-in-out_infinite]"
             href="www.linkedin.com/in/omar-albaz-29b72b272"
             target="_blank"
             rel="noopener noreferrer"
@@ -65,7 +65,7 @@ function Home() {
           </a>
           <a
             className="border-[2px] rounded-full text-center px-3 py-1 hover:text-yellow-500 hover:bg-white hover:border-yellow-500
-            duration-1000 font-semibold hover:animate-none animate-[bounce_1.3s_ease-in-out_infinite]"
+            duration-1000 font-semibold hover:[animation-play-state:paused] animate-[bounce_1.3s_ease-in-out_infinite]"
             href="https://docs.google.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
