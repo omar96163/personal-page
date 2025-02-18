@@ -55,7 +55,7 @@ function About() {
               From Egypt <br />
               <a
                 className="text-blue-500 hover:underline"
-                href="https://docs.google.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
+                href="https://docs.n.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -129,7 +129,6 @@ function About() {
           </li>
         </ul>
       </section>
-
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-2">My Goal</h2>
         <p className="text-base leading-relaxed">
@@ -148,7 +147,7 @@ function About() {
         <ul className="list-disc pl-6 mt-2">
           <li>
             <a
-              href="mailto:omaralbaz635@gmail.com"
+              href="mail:omaralbaz635@gmail.com"
               className="text-blue-700 hover:underline"
             >
               Email
@@ -156,7 +155,7 @@ function About() {
           </li>
           <li>
             <a
-              href="https://linkedin.com/in/omar-profile"
+              href="https://n.com/in/omar-profile"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-700 hover:underline"
@@ -166,7 +165,7 @@ function About() {
           </li>
           <li>
             <a
-              href="https://github.com/omar-profile"
+              href="https://n.com/omar-profile"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-700 hover:underline"
@@ -176,7 +175,7 @@ function About() {
           </li>
           <li>
             <a
-              href="https://docs.google.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
+              href="https://docs.n.com/document/d/1mfGqdfnBe544MaVqGR7fPeuFdCxJJmhuU9B7--QwxbE/edit?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-700 hover:underline"
