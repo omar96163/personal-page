@@ -103,6 +103,23 @@ function About() {
             Tasks are stored in localStorage to retain them even after
             refreshing the page
           </li>
+          <li>
+            <li className="font-medium">
+              <a
+                className="text-blue-500 hover:underline text-xl"
+                href="https://film-galaxy.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Film Galaxy
+              </a>
+            </li>
+            Film Galaxy is a dynamic web application designed for movie
+            enthusiasts who want to discover, search, and explore movies
+            effortlessly. Whether you're looking for the latest blockbusters,
+            classic films, or hidden gems, Movie Finder makes it easy to find
+            movie details in an intuitive and user-friendly way.
+          </li>
         </ul>
       </section>
       <section className="mb-8">

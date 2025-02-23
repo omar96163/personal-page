@@ -75,8 +75,8 @@ function Home() {
         </div>
       </main>
       <img
-        className="opacity-50 w-60 md:w-80 lg:w-96 shadow-yellow-500 transition duration-1000 hover:opacity-100
-         rounded-full shadow-2xl"
+        className="opacity-50 w-60 md:w-80 lg:w-96 shadow-yellow-500 transition-all duration-500 hover:opacity-100
+         rounded-full shadow-2xl animate-[shadow_2s_ease_infinite_alternate]"
         src="images/o.webp"
         alt="OMAR ALBAZ's photo"
         title="OMAR ALBAZ"
