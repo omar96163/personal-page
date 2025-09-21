@@ -62,25 +62,25 @@ function Home() {
       <section className="relative w-72 h-72 md:w-96 md:h-96 my-20 md:my-0 opacity-0 animate-[goLeft_1s_ease_forwards_.5s]">
         <p
           className="absolute top-4 left-2 rounded-full text-black bg-white h-10 w-10 flex items-center justify-center text-[12px] z-50
-          shadow-md shadow-gray-300 outline-none animate-[translate_3s_ease-in-out_infinite_1s_alternate] hover:rotate-[360deg] transition duration-500"
+          shadow-md shadow-gray-300 outline-none animate-[translate_3s_ease-in-out_infinite_1.2s_alternate] hover:rotate-[360deg] transition duration-500"
         >
           Next
         </p>
         <p
           className="absolute bottom-2 left-2 rounded-full bg-green-600 h-10 w-10 flex items-center justify-center text-[12px] z-50
-          shadow-md shadow-green-700 outline-none animate-[translate_3s_ease-in-out_infinite_1.5s_alternate] hover:rotate-[360deg] transition duration-500"
+          shadow-md shadow-green-700 outline-none animate-[translate_3s_ease-in-out_infinite_1.7s_alternate] hover:rotate-[360deg] transition duration-500"
         >
           Node
         </p>
         <p
           className="absolute right-2 top-4 rounded-full text-black bg-yellow-300 h-10 w-10 flex items-center justify-center text-[12px] z-50
-          shadow-md shadow-yellow-500 outline-none animate-[translate_3s_ease-in-out_infinite_2s_alternate] hover:rotate-[360deg] transition duration-500"
+          shadow-md shadow-yellow-500 outline-none animate-[translate_3s_ease-in-out_infinite_2.2s_alternate] hover:rotate-[360deg] transition duration-500"
         >
           JSC
         </p>
         <p
           className="absolute right-2 bottom-4 rounded-full bg-gray-600 h-10 w-10 flex items-center justify-center text-[12px] z-50
-          shadow-md shadow-gray-700 outline-none animate-[translate_3s_ease-in-out_infinite_2.5s_alternate] hover:rotate-[360deg] transition duration-500"
+          shadow-md shadow-gray-700 outline-none animate-[translate_3s_ease-in-out_infinite_2.7s_alternate] hover:rotate-[360deg] transition duration-500"
         >
           EXP
         </p>
@@ -89,7 +89,7 @@ function Home() {
           shadow-[0_0_25px_3px_rgba(234,179,8,0.8),inset_0_0_20px_2px_rgba(234,179,8,0.6)] animate-[pulseShadow_3s_ease-in-out_infinite]"
         ></div>
         <img
-          className="transition-all duration-500 hover:scale-100 scale-90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="transition-all duration-500 hover:scale-95 scale-90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           src="images/omar.png"
           alt="OMAR ALBAZ's photo"
           title="OMAR ALBAZ"
