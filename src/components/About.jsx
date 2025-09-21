@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function About() {
   const [me, setme] = useState(false);
@@ -8,14 +8,14 @@ function About() {
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
         <div>
           <h1 className="text-3xl font-bold mb-4">
-            Hi, I'm{" "}
+            Hi, I am{" "}
             <strong className="text-yellow-500 px-2 rounded-2xl border-2 border-dashed border-yellow-500">
               {" "}
               OMAR
             </strong>{" "}
           </h1>
           <p className="text-base mb-8">
-            A talented and passionate Front-End Developer and an ALX graduate{" "}
+            A talented and passionate Full Stack Developer and an ALX graduate{" "}
             with a strong focus on building modern,
             <br /> user-friendly web applications
           </p>
@@ -29,13 +29,18 @@ function About() {
           </section>
         </div>
         <div className="flex flex-col items-center">
-          <img
-            className="opacity-50 w-44 md:w-52 lg:w-64 hover:opacity-100 transition-all duration-1000 
-            rounded-full shadow-xl shadow-yellow-500"
-            src="images/o.webp"
-            alt="OMAR ALBAZ's photo"
-            title="OMAR ALBAZ"
-          />
+          <div className="relative w-72 h-72 md:w-96 md:h-96">
+            <div
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 md:w-80 md:h-80 rounded-full border-8 border-yellow-500 
+              shadow-[0_0_25px_3px_rgba(234,179,8,0.8),inset_0_0_20px_2px_rgba(234,179,8,0.6)] animate-[pulseShadow_3s_ease-in-out_infinite]"
+            ></div>
+            <img
+              className="transition-all duration-500 hover:scale-100 scale-90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              src="images/omar.png"
+              alt="OMAR ALBAZ's photo"
+              title="OMAR ALBAZ"
+            />
+          </div>
           <p
             alt="Toggle details"
             onClick={() => (me ? setme(false) : setme(true))}
@@ -116,7 +121,7 @@ function About() {
             </li>
             Film Galaxy is a dynamic web application designed for movie
             enthusiasts who want to discover, search, and explore movies
-            effortlessly. Whether you're looking for the latest blockbusters,
+            effortlessly. Whether you are looking for the latest blockbusters,
             classic films, or hidden gems, Movie Finder makes it easy to find
             movie details in an intuitive and user-friendly way.
           </li>
@@ -154,11 +159,10 @@ function About() {
           building exceptional web experiences
         </p>
       </section>
-
       <section>
         <h2 className="text-3xl font-semibold mb-2">Contact Me</h2>
         <p className="text-base leading-relaxed">
-          If you're looking for a creative and dedicated Front-End Developer,
+          If you are looking for a creative and dedicated Front-End Developer,
           feel free to reach out :
         </p>
         <ul className="list-disc pl-6 mt-2">
