@@ -214,7 +214,7 @@ function About() {
           </article>
           <article
             className="max-w-[600px] md:min-h-[590px] rounded-2xl p-5 border-2 group hover:-translate-y-2 transition duration-300 hover:border-yellow-500 
-  shadow-md hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black"
+            shadow-md hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black"
           >
             <img
               src="images/CoursesWebsite.png"
@@ -233,15 +233,19 @@ function About() {
               </span>
             </a>
             <p className="mt-3 leading-relaxed">
-              <strong>Courses Website</strong> is a dynamic web platform built with
+              <strong>Courses Website</strong> is a dynamic web platform built
+              with
               <span className="text-yellow-500 font-medium"> Next </span>,
               <span className="text-yellow-400 font-medium">
                 {" "}
                 Tailwind CSS{" "}
               </span>
               , and{" "}
-              <span className="text-yellow-500 font-medium"> My custom backend API</span>.
-              <br></br> It allows users to easily browse and enroll in courses,
+              <span className="text-yellow-500 font-medium">
+                {" "}
+                My custom backend API
+              </span>
+              .<br></br> It allows users to easily browse and enroll in courses,
               while providing an intuitive <strong>login system</strong>.
               Administrators can add, edit, and delete courses, while managers
               can view and remove users as needed. The app is{" "}
