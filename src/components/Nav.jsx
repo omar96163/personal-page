@@ -13,7 +13,7 @@ function Nav() {
             onClick={() => setactive("/")}
             className="text-4xl font-bold transition-all duration-300 hover:scale-105"
           >
-            B<i className="text-yellow-500">٨</i> Z ...
+            B<span className="text-yellow-500"> A </span>Z . . .
           </p>
         </Link>
         <div className="space-x-10 hidden sm:block">
