@@ -93,7 +93,7 @@ function About() {
       </section>
       <section className="mt-40">
         <h2 className="text-2xl md:text-5xl font-bold mb-20 animate-[jello-vertical_1s_ease_forwards_2] text-center">
-          My Projects
+          My <span className="text-yellow-500">Projects</span>
         </h2>
         <section className="flex flex-wrap items-center justify-center gap-10">
           <article
@@ -103,7 +103,7 @@ function About() {
             <img
               src="images/RecipeFinder.png"
               alt="Recipe Finder App screenshot"
-              className="object-cover rounded-md  opacity-70 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-300"
+              className="object-cover rounded-md opacity-70 group-hover:opacity-100 group-hover:scale-[1.02] transition duration-300"
             />
             <a
               className="font-medium text-yellow-500 hover:underline text-xl"
@@ -112,7 +112,7 @@ function About() {
               rel="noopener noreferrer"
             >
               Recipe Finder
-              <span className="ml-4 text-[25px] group-hover:translate-x-3 group-hover:animate-spin transition-all duration-300 inline-block">
+              <span className="ml-4 text-[30px] group-hover:translate-x-3 group-hover:animate-pulse transition-all duration-300 inline-block">
                 ›
               </span>
             </a>
@@ -171,7 +171,7 @@ function About() {
               rel="noopener noreferrer"
             >
               Film Galaxy
-              <span className="ml-4 text-[25px] group-hover:translate-x-3 group-hover:animate-spin transition-all duration-300 inline-block">
+              <span className="ml-4 text-[30px] group-hover:translate-x-3 group-hover:animate-pulse transition-all duration-300 inline-block">
                 ›
               </span>
             </a>
@@ -229,7 +229,7 @@ function About() {
               rel="noopener noreferrer"
             >
               Courses Website
-              <span className="ml-4 text-[25px] group-hover:translate-x-3 group-hover:animate-spin transition-all duration-300 inline-block">
+              <span className="ml-4 text-[30px] group-hover:translate-x-3 group-hover:animate-pulse transition-all duration-300 inline-block">
                 ›
               </span>
             </a>
@@ -290,7 +290,7 @@ function About() {
               rel="noopener noreferrer"
             >
               Backend API collection
-              <span className="ml-4 text-[25px] group-hover:translate-x-3 group-hover:animate-spin transition-all duration-300 inline-block">
+              <span className="ml-4 text-[30px] group-hover:translate-x-3 group-hover:animate-pulse transition-all duration-300 inline-block">
                 ›
               </span>
             </a>
@@ -632,11 +632,11 @@ function About() {
         <h2 className="text-2xl md:text-5xl text-yellow-500 font-bold mb-20 animate-[jello-vertical_1s_ease_forwards_2] text-center">
           Contact
         </h2>
-        <div className="flex items-center justify-around">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-around gap-y-16 lg:gap-0">
           <div className="flex flex-col items-center gap-y-8">
             <h2 className="md:text-2xl font-bold">Social media</h2>
-            <div className="flex flex-col sm:flex-row sm:gap-x-6 gap-y-6">
-              <div className="flex flex-col gap-y-6">
+            <div className="flex flex-col sm:flex-row sm:gap-x-8 gap-y-8">
+              <div className="flex flex-col gap-y-8">
                 <a
                   href="mailto:omaralbaz635@gmail.com"
                   className="px-6 py-3 flex items-center justify-center border-2 rounded-lg border-blue-500 text-blue-500 font-semibold group
@@ -718,7 +718,7 @@ function About() {
                   Facebook
                 </a>
               </div>
-              <div className="flex flex-col gap-y-6">
+              <div className="flex flex-col gap-y-8">
                 <a
                   href="https://twitter.com/omar-profile"
                   target="_blank"
