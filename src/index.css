@@ -6,6 +6,10 @@ textarea::-webkit-scrollbar {
   display: none;
 }
 
+.text-shadow-black {
+  text-shadow: 4px 4px 8px black;
+}
+
 @keyframes color {
   to {
     color: #a16207;
