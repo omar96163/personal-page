@@ -49,13 +49,12 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-y-8">
-      <h2 className="md:text-2xl font-bold">Contact Me</h2>
-
+    <div className="flex flex-col items-center">
       <form
         onSubmit={handleSubmit}
-        className="w-[400px] flex flex-col items-center gap-y-6"
+        className="w-[300px] md:w-[400px] lg:w-[500px] flex flex-col items-center gap-y-8"
       >
+        <h2 className="md:text-2xl font-bold">Talk To Me</h2>
         <input
           type="text"
           name="name"
