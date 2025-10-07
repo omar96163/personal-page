@@ -75,34 +75,23 @@ textarea::-webkit-scrollbar {
   }
 }
 
-@keyframes goRight {
-  0% {
-    transform: translate(-100%);
-  }
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
-
 @keyframes goLeft {
   0% {
-    transform: translate(100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translate(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
-@keyframes cube {
-  from {
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    opacity: 1;
+@keyframes goRight {
+  0% {
+    transform: translateX(-100%);
   }
-  to {
-    transform: scale(20) rotate(960deg) translate(-50%, -50%);
-    opacity: 0;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
