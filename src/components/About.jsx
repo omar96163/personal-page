@@ -1,7 +1,22 @@
 import { useState } from "react";
 import ContactForm from "./ContactForm";
+import { useInView } from "react-intersection-observer";
 
 function About() {
+  const { ref: section1Ref, inView: section1InView } = useInView({
+    threshold: 0.01,
+    triggerOnce: true,
+  });
+
+  const { ref: section2Ref, inView: section2InView } = useInView({
+    threshold: 0.01,
+    triggerOnce: true,
+  });
+  const { ref: section3Ref, inView: section3InView } = useInView({
+    threshold: 0.01,
+    triggerOnce: true,
+  });
+
   const [me, setme] = useState(true);
 
   return (
@@ -91,14 +106,25 @@ function About() {
           </div>
         </div>
       </section>
-      <section className="mt-40">
-        <h2 className="text-2xl md:text-5xl font-bold mb-20 animate-[jello-vertical_1s_ease_forwards_2] text-center">
+      <section
+        ref={section1Ref}
+        className={`mt-40 transition duration-700 ${
+          section1InView ? "scale-100" : "scale-0"
+        }`}
+      >
+        <h2
+          className={`text-2xl md:text-5xl font-bold mb-20 text-center ${
+            section1InView ? "animate-[jello-vertical_1s_ease_forwards_2]" : ""
+          }`}
+        >
           My <span className="text-yellow-500">Projects</span>
         </h2>
         <section className="flex flex-wrap items-center justify-center gap-10">
           <article
-            className="max-w-[600px] md:min-h-[600px] rounded-2xl p-4 group border-2 hover:-translate-y-2 transition duration-300 hover:border-yellow-500 
-            shadow-md hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black flex flex-col md:justify-around items-start gap-5 md:gap-0"
+            className={`max-w-[600px] md:min-h-[600px] rounded-2xl p-4 group border-2 transition duration-300 hover:border-yellow-500 shadow-md md:gap-0 opacity-0
+            hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black flex flex-col md:justify-around items-start gap-5 ${
+              section1InView ? "animate-[goRight_1s_ease_forwards_.5s]" : ""
+            }`}
           >
             <img
               src="images/RecipeFinder.png"
@@ -156,8 +182,10 @@ function About() {
             </a>
           </article>
           <article
-            className="max-w-[600px] md:min-h-[600px] rounded-2xl p-4 border-2 group hover:-translate-y-2 transition duration-300 hover:border-yellow-500 
-            shadow-md hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black flex flex-col md:justify-around items-start gap-5 md:gap-0"
+            className={`max-w-[600px] md:min-h-[600px] rounded-2xl p-4 group border-2 transition duration-300 hover:border-yellow-500 shadow-md md:gap-0 opacity-0
+            hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black flex flex-col md:justify-around items-start gap-5 ${
+              section1InView ? "animate-[goLeft_1s_ease_forwards_.7s]" : ""
+            }`}
           >
             <img
               src="images/FilmGalaxy.png"
@@ -214,8 +242,10 @@ function About() {
             </a>
           </article>
           <article
-            className="max-w-[600px] md:min-h-[600px] rounded-2xl p-4 border-2 group hover:-translate-y-2 transition duration-300 hover:border-yellow-500 
-            shadow-md hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black flex flex-col md:justify-around items-start gap-5 md:gap-0"
+            className={`max-w-[600px] md:min-h-[600px] rounded-2xl p-4 group border-2 transition duration-300 hover:border-yellow-500 shadow-md md:gap-0 opacity-0
+            hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black flex flex-col md:justify-around items-start gap-5 ${
+              section1InView ? "animate-[goRight_1s_ease_forwards_.9s]" : ""
+            }`}
           >
             <img
               src="images/CoursesWebsite.png"
@@ -275,8 +305,10 @@ function About() {
             </a>
           </article>
           <article
-            className="max-w-[600px] md:min-h-[600px] rounded-2xl p-4 border-2 group hover:-translate-y-2 transition duration-300 hover:border-yellow-500 
-            shadow-md hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black flex flex-col md:justify-around items-start gap-5 md:gap-0"
+            className={`max-w-[600px] md:min-h-[600px] rounded-2xl p-4 group border-2 transition duration-300 hover:border-yellow-500 shadow-md md:gap-0 opacity-0
+            hover:shadow-yellow-300 bg-gradient-to-tr from-black via-yellow-950 to-black flex flex-col md:justify-around items-start gap-5 ${
+              section1InView ? "animate-[goLeft_1s_ease_forwards_1.1s]" : ""
+            }`}
           >
             <img
               src="images/BackendProject.png"
@@ -326,15 +358,26 @@ function About() {
           </article>
         </section>
       </section>
-      <section className="mt-40">
-        <h2 className="text-2xl md:text-5xl font-bold mb-20 animate-[jello-vertical_1s_ease_forwards_2] text-center">
+      <section
+        ref={section2Ref}
+        className={`mt-40 transition duration-700 ${
+          section2InView ? "scale-100" : "scale-0"
+        }`}
+      >
+        <h2
+          className={`text-2xl md:text-5xl font-bold mb-20 text-center ${
+            section2InView ? "animate-[jello-vertical_1s_ease_forwards_2]" : ""
+          }`}
+        >
           Technical <span className="text-yellow-500">Skills</span>
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-16">
           <div
-            className="p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
-            hover:-translate-y-2 transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
-            flex flex-col md:justify-around items-center gap-5 md:gap-0 group"
+            className={`p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
+            transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px]
+            flex flex-col md:justify-around items-center gap-5 md:gap-0 group opacity-0 ${
+              section2InView ? "animate-[goUp_1s_ease_forwards_.2s]" : ""
+            }`}
           >
             <div className="flex items-center justify-center">
               <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition duration-300">
@@ -370,7 +413,7 @@ function About() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm"
+                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm hover:scale-105 transition duration-300"
                 >
                   {skill}
                 </span>
@@ -378,9 +421,11 @@ function About() {
             </div>
           </div>
           <div
-            className="p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
-            hover:-translate-y-2 transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
-            flex flex-col md:justify-around items-center gap-5 md:gap-0 group"
+            className={`p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
+            transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
+            flex flex-col md:justify-around items-center gap-5 md:gap-0 group opacity-0 ${
+              section2InView ? "animate-[goUp_1s_ease_forwards_.4s]" : ""
+            }`}
           >
             <div className="flex items-center justify-center">
               <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition duration-300">
@@ -412,7 +457,7 @@ function About() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm"
+                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm hover:scale-105 transition duration-300"
                 >
                   {skill}
                 </span>
@@ -420,9 +465,11 @@ function About() {
             </div>
           </div>
           <div
-            className="p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
-            hover:-translate-y-2 transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
-            flex flex-col md:justify-around items-center gap-5 md:gap-0 group"
+            className={`p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
+            transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
+            flex flex-col md:justify-around items-center gap-5 md:gap-0 group opacity-0 ${
+              section2InView ? "animate-[goUp_1s_ease_forwards_.6s]" : ""
+            }`}
           >
             <div className="flex items-center justify-center">
               <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition duration-300">
@@ -455,7 +502,7 @@ function About() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm"
+                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm hover:scale-105 transition duration-300"
                 >
                   {skill}
                 </span>
@@ -463,9 +510,11 @@ function About() {
             </div>
           </div>
           <div
-            className="p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
-            hover:-translate-y-2 transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
-            flex flex-col md:justify-around items-center gap-5 md:gap-0 group"
+            className={`p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
+            transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
+            flex flex-col md:justify-around items-center gap-5 md:gap-0 group opacity-0 ${
+              section2InView ? "animate-[goUp_1s_ease_forwards_.8s]" : ""
+            }`}
           >
             <div className="flex items-center justify-center">
               <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition duration-300">
@@ -504,7 +553,7 @@ function About() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm"
+                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm hover:scale-105 transition duration-300"
                 >
                   {skill}
                 </span>
@@ -512,9 +561,11 @@ function About() {
             </div>
           </div>
           <div
-            className="p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
-            hover:-translate-y-2 transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
-            flex flex-col md:justify-around items-center gap-5 md:gap-0 group"
+            className={`p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
+            transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
+            flex flex-col md:justify-around items-center gap-5 md:gap-0 group opacity-0 ${
+              section2InView ? "animate-[goUp_1s_ease_forwards_1s]" : ""
+            }`}
           >
             <div className="flex items-center justify-center">
               <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition duration-300">
@@ -554,7 +605,7 @@ function About() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm"
+                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm hover:scale-105 transition duration-300"
                 >
                   {skill}
                 </span>
@@ -562,9 +613,11 @@ function About() {
             </div>
           </div>
           <div
-            className="p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
-            hover:-translate-y-2 transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
-            flex flex-col md:justify-around items-center gap-5 md:gap-0 group"
+            className={`p-4 bg-gradient-to-tr from-black via-yellow-950 to-black rounded-xl shadow-lg hover:shadow-yellow-300 border-2 
+            transition duration-300 hover:border-yellow-500 w-[350px] md:min-h-[350px] 
+            flex flex-col md:justify-around items-center gap-5 md:gap-0 group opacity-0 ${
+              section2InView ? "animate-[goUp_1s_ease_forwards_1.2s]" : ""
+            }`}
           >
             <div className="flex items-center justify-center">
               <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition duration-300">
@@ -598,7 +651,7 @@ function About() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm"
+                  className="px-3 py-1 bg-[#2d2d32] rounded-md text-sm hover:scale-105 transition duration-300"
                 >
                   {skill}
                 </span>
@@ -606,7 +659,11 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="mt-16 text-center">
+        <div
+          className={`mt-16 text-center opacity-0 ${
+            section2InView ? "animate-[goUp_1s_ease_forwards_1.5s]" : ""
+          }`}
+        >
           <div className="bg-gradient-to-r from-yellow-200 to-yellow-300 inline-flex items-center px-8 py-4 rounded-2xl shadow-lg">
             <svg
               className="w-5 h-5 text-black mr-2 hidden sm:block"
@@ -621,15 +678,24 @@ function About() {
                 d="M13 10V3L4 14h7v7l9-11h-7z"
               />
             </svg>
-            <span className="text-xl font-semibold text-gray-800">
+            <span className="lg:text-xl font-semibold text-gray-800">
               Always learning new technologies and staying updated with industry
               trends
             </span>
           </div>
         </div>
       </section>
-      <section className="mt-40">
-        <h2 className="text-2xl md:text-5xl text-yellow-500 font-bold mb-20 animate-[jello-vertical_1s_ease_forwards_2] text-center">
+      <section
+        ref={section3Ref}
+        className={`mt-40 mb-10 transition duration-700 ${
+          section3InView ? "scale-100" : "scale-0"
+        }`}
+      >
+        <h2
+          className={`text-2xl md:text-5xl font-bold mb-20 text-center ${
+            section3InView ? "animate-[jello-vertical_1s_ease_forwards_2]" : ""
+          }`}
+        >
           Contact
         </h2>
         <div className="flex flex-col-reverse lg:flex-row items-center justify-around gap-y-16 lg:gap-0">
@@ -803,7 +869,7 @@ function About() {
                 d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
               />
             </svg>
-            <span className="text-xl font-semibold text-gray-800">
+            <span className="lg:text-xl font-semibold text-gray-800">
               Ready to collaborate and create amazing web experiences together!
             </span>
           </div>
