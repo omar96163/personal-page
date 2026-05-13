@@ -214,7 +214,7 @@ function About() {
                 style={{ background: "linear-gradient(135deg, rgba(124,58,237,0.3), rgba(168,85,247,0.1))", animation: "pulseGlow 4s ease-in-out infinite" }}
               />
               <div className="absolute inset-2 rounded-3xl overflow-hidden border border-violet-500/20">
-                <img src="images/omar.png" alt="Omar Al-Baz" className="w-full h-full object-cover" />
+                <img src="images/OmeAlbaz.png" alt="Omar Al-Baz" className="w-full h-full object-cover" />
               </div>
               {/* Badge */}
               <div className="absolute -bottom-4 -right-4 glass rounded-2xl p-3 flex items-center gap-2 border border-violet-500/20">

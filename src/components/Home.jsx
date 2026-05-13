@@ -329,7 +329,7 @@ function Home() {
                   }}
                 >
                   <img
-                    src="images/omar.png"
+                    src="images/OmeAlbaz.png"
                     alt="Omar Al-Baz"
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
