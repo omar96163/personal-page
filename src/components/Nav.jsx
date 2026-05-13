@@ -31,13 +31,35 @@ function Nav() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
           {/* ── Logo ── */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-purple-400 flex items-center justify-center shadow-lg shadow-violet-700/40 transition-transform duration-300 group-hover:scale-110">
-              <span className="text-white font-black text-sm">O</span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="relative">
+              {/* Outer Glow */}
+              <div className="absolute inset-0 bg-violet-600/20 blur-xl rounded-full group-hover:bg-violet-600/40 transition-all duration-700"></div>
+              
+              {/* Icon Box */}
+              <div className="relative w-11 h-11 rounded-2xl bg-[#0d0d1f] border border-white/10 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-violet-500/50 group-hover:-rotate-12">
+                <div className="absolute inset-0 opacity-20 dot-pattern"></div>
+                <span className="relative text-2xl font-black text-white group-hover:scale-110 transition-transform duration-500">
+                  O
+                </span>
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-violet-500 to-transparent opacity-50"></div>
+              </div>
             </div>
-            <span className="text-white font-bold text-lg tracking-tight">
-              Omar<span className="gradient-text">.dev</span>
-            </span>
+
+            <div className="flex flex-col">
+              <div className="flex items-center gap-1">
+                <span className="text-white font-black text-xl tracking-tighter transition-colors group-hover:text-violet-400 uppercase">
+                  Omar
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-violet-500 mt-1 animate-pulse"></span>
+                <span className="text-white font-black text-xl tracking-tighter transition-colors group-hover:text-violet-400 uppercase">
+                  Al-baz
+                </span>
+              </div>
+              <span className="text-[10px] text-slate-500 font-bold uppercase tracking-[0.4em] leading-none mt-1">
+                Full-stack Developer
+              </span>
+            </div>
           </Link>
 
           {/* ── Desktop links ── */}
@@ -52,8 +74,10 @@ function Nav() {
               </Link>
             ))}
             <a
-              href="mailto:omaralbaz635@gmail.com"
-              className="btn-primary text-sm py-2 px-5 rounded-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://mostaql.com/u/omar_youns"
+              className="btn-primary hover:translate-x-1 text-sm py-2 px-5 rounded-lg"
             >
               <span>Hire Me</span>
               <svg className="w-4 h-4 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">

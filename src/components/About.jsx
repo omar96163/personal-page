@@ -194,7 +194,7 @@ function About() {
             </div>
 
             <div className="flex gap-3 mt-2">
-              <a href="https://mostaql.com/u/omar_youns" className="btn-primary text-sm py-2.5 px-6">
+              <a target="_blank" rel="noopener noreferrer" href="https://mostaql.com/u/omar_youns" className="btn-primary text-sm py-2.5 px-6">
                 <span>Hire Me</span>
               </a>
               <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1JZfRd8j84hT0Hu2ypQ2QXYXAI5THL-G8/view?usp=sharing" className="btn-outline text-sm py-2.5 px-6">
@@ -301,7 +301,7 @@ function About() {
               </div>
 
               {/* Signature */}
-              <div className={`mt-6 pt-4 opacity-0-init ${contactInView ? "animate-fadeUp delay-700" : ""}`}>
+              <div className={`mt-10 pt-4 opacity-0-init ${contactInView ? "animate-fadeUp delay-700" : ""}`}>
                 <div
                   className="text-4xl text-white/80 select-none hover:text-violet-400 transition-colors duration-500 cursor-default" 
                   style={{ fontFamily: "var(--font-signature)", transform: "rotate(-2deg)" }}
