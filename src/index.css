@@ -6,6 +6,7 @@
 :root {
   --font-primary: 'Space Grotesk', sans-serif;
   --font-secondary: 'Inter', sans-serif;
+  --font-signature: 'Dancing Script', cursive;
 
   /* Color palette */
   --clr-bg:        #060610;
