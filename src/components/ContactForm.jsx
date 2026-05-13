@@ -8,90 +8,69 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus(true);
-
     const form = e.target;
     const data = new FormData(form);
-
     try {
       const res = await fetch("https://formspree.io/f/xyznyaoo", {
         method: "POST",
         headers: { Accept: "application/json" },
         body: data,
       });
-
       if (res.ok) {
         form.reset();
         setStatus(false);
-        toast.success("Message sent successfully !", {
-          position: "bottom-right",
-          autoClose: 4000,
-          hideProgressBar: true,
-          closeOnClick: true,
-        });
+        toast.success("Message sent successfully!", { position: "bottom-right", autoClose: 4000, hideProgressBar: true });
       } else {
         setStatus(false);
-        toast.error("Something went wrong.", {
-          position: "bottom-right",
-          autoClose: 4000,
-          hideProgressBar: true,
-          closeOnClick: true,
-        });
+        toast.error("Something went wrong.", { position: "bottom-right", autoClose: 4000, hideProgressBar: true });
       }
     } catch {
       setStatus(false);
-      toast.error("Network error. Please try later.", {
-        position: "bottom-right",
-        autoClose: 4000,
-        hideProgressBar: true,
-        closeOnClick: true,
-      });
+      toast.error("Network error. Please try later.", { position: "bottom-right", autoClose: 4000, hideProgressBar: true });
     }
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <form
-        onSubmit={handleSubmit}
-        className="w-[300px] md:w-[400px] lg:w-[500px] flex flex-col items-center gap-y-8"
-      >
-        <h2 className="md:text-2xl font-bold">Talk To Me</h2>
+    <div className="flex flex-col items-center w-full">
+      <form onSubmit={handleSubmit} className="w-full max-w-md flex flex-col gap-5">
+        <h3 className="text-xl font-bold text-white mb-1" style={{ fontFamily: "var(--font-primary)" }}>
+          Send a Message
+        </h3>
+
         <input
           type="text"
           name="name"
           placeholder="Your Name"
           required
-          className="w-full font-bold px-3 py-2 rounded-lg outline-none border-[3px] border-yellow-200 hover:border-yellow-400 
-          focus:border-yellow-600 bg-transparent shadow-lg shadow-black transition duration-300 placeholder:font-thin focus:-translate-y-1"
+          className="contact-input"
         />
-
         <input
           type="email"
           name="email"
           placeholder="Your Email"
           required
-          className="w-full font-bold px-3 py-2 rounded-lg outline-none border-[3px] border-yellow-200 hover:border-yellow-400 
-          focus:border-yellow-600 bg-transparent shadow-lg shadow-black transition duration-300 placeholder:font-thin focus:-translate-y-1"
+          className="contact-input"
         />
-
         <textarea
           name="message"
           placeholder="Your Message"
           required
           rows="5"
-          className="w-full font-bold px-3 py-2 rounded-lg outline-none border-[3px] border-yellow-200 hover:border-yellow-400 resize-y
-          focus:border-yellow-600 bg-transparent shadow-lg shadow-black transition duration-300 placeholder:font-thin focus:-translate-y-1"
-        ></textarea>
-
+          className="contact-input resize-y"
+        />
         <button
           type="submit"
-          disabled={status === "loading"}
-          className="w-full rounded-lg p-2 border-2 border-yellow-500 hover:text-yellow-500 transition duration-300 bg-yellow-500 
-          text-black font-semibold hover:bg-black active:scale-90"
+          disabled={status}
+          className="btn-primary justify-center w-full disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {status ? "Sending..." : "Send"}
+          <span>{status ? "Sending..." : "Send Message"}</span>
+          {!status && (
+            <svg className="w-4 h-4 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+          )}
         </button>
       </form>
-
       <ToastContainer limit={3} newestOnTop />
     </div>
   );
